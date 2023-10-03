@@ -190,6 +190,9 @@ def main():
             raw_data = input('\nWould you like to see the raw data? Enter yes or no.\n')
             if raw_data.lower() == 'yes':
 
+                #display 5 rows of data at a time
+                pd.set_option("display.max_columns",200)
+                
                 row=0
                 while row<=len(df):
                     print(df.loc[row:row+4,:])
