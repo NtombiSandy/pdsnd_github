@@ -10,7 +10,9 @@ Explore U.S. bikeshare data
 The project uses python to explore US bikeshare data. The project calculates statistics and builds an interactive environment where a user chooses the data and filters to analyse.
 
 ### Files used
-Include the files used
+chicago.csv
+washington.csv
+new_york_city.csv
 
 ### Credits
 It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
