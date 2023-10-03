@@ -45,11 +45,15 @@ def load_data(city, month, day):
 
  # load data file into a dataframe
     df = pd.read_csv(CITY_DATA[city])
+    #add Gender and Birth Year to washington CSV file and initialise both columns to Unknown. 
+    # This prevents the code from breaking when calculating stats on these two field that exist on the other datasets. 
     if city=='washington':
         df['Gender']="Unknown"
         df['Birth Year']="Unknown"
-
+    
+    #fill all NaNs with 0 to prevent code from breaking when running calculations
     df.fillna(0,inplace=True)
+
     # convert the Start Time column to datetime
     df['Start Time'] = pd.to_datetime(df['Start Time'])
     
@@ -186,6 +190,9 @@ def main():
             raw_data = input('\nWould you like to see the raw data? Enter yes or no.\n')
             if raw_data.lower() == 'yes':
 
+                #display 5 rows of data at a time
+                pd.set_option("display.max_columns",200)
+                
                 row=0
                 while row<=len(df):
                     print(df.loc[row:row+4,:])
