@@ -50,9 +50,10 @@ def load_data(city, month, day):
     if city=='washington':
         df['Gender']="Unknown"
         df['Birth Year']="Unknown"
-
-    df.fillna(0,inplace=True)
     
+    #fill all NaNs with 0 to prevent code from breaking when running calculations
+    df.fillna(0,inplace=True)
+
     # convert the Start Time column to datetime
     df['Start Time'] = pd.to_datetime(df['Start Time'])
     
