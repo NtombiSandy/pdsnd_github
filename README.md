@@ -7,7 +7,7 @@
 Explore U.S. bikeshare data
 
 ### Description
-Describe what your project is about and what it does
+The project uses python to explore US bikeshare data. The project calculates statistics and builds an interactive environment where a user chooses the data and filters to analyse.
 
 ### Files used
 Include the files used
